@@ -94,8 +94,63 @@ Optional:
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+#### User
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| userId   | String | unique    |
+| name     | String | name of user |
+| username | String | username of user |
+| email | String | email of user |
+| password | String | password of user |
+
+#### Recipe
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for recipe (default field) |
+   | author        | Pointer to User| image author |
+   | image         | File     | image that user posts |
+   | caption       | String   | image caption by author |
+   | comments      | Array of Pointer to Comment | all comments belonging to recipe |
+   | commentsCount | Number   | number of comments that has been posted to an image |
+   | likesCount    | Number   | number of likes for the recipe |
+   | forksCount    | Number   | number of forks for the recipe |
+   | createdAt     | DateTime | date when recipe is created (default field) |
+   | updatedAt     | DateTime | date when recipe is last updated (default field) |
+   | isForked | Boolean | true if forked, false otherwise
+
+#### Comment
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for comment (default field) |
+   | author        | Pointer to User| comment author |
+   | recipe        | Pointer to Recipe | recipe of comment |
+   | text | String | comment text |
+   | likesCount | Number | number of likes for the comment |
+   | createdAt     | DateTime | date when recipe is created (default field) |
+   | updatedAt     | DateTime | date when recipe is last updated (default field) |
+   
+
 ### Networking
 - [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- Login Screen
+    - (Create/POST) Authenticate User
+- Register Screen
+    - (Create/POST) Create new user
+- Home Feed Screen
+    - (Read/GET) Query all recipes
+    - (Create/POST) Create a new like on recipe post
+    - (DELETE) Remove an existing like
+    - (Create/POST) Create a new comment on a receipe post.
+    - (DELETE) Delete an existing comment
+- Profile Screen
+    - (Read/GET) Query all recipes belonging to current user
+    - (Create/POST) Create a new comment on a recipe
+    - (DELETE) Delete an existing comment (both own + other people's comments)
+    - (Create/POST) Create a new like on a recipe
+    - (DELETE) Remove an existing like
+    - (DELETE) Delete an existing recipe
+
+- Create Receipe Screen
+    - (Create/POST) Create a new recipe post object
