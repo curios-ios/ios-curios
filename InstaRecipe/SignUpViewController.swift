@@ -15,10 +15,16 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
 
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var createAccount: UIButton!
+
+  
+    @IBOutlet weak var createAccountButton: UIButton!
+    
+    @IBAction func backToSignUp(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        createAccount.layer.cornerRadius = 15.0
+        createAccountButton.layer.cornerRadius = 15.0
         nameTextField.attributedPlaceholder = NSAttributedString(string: "Name",
                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
