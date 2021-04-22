@@ -26,17 +26,17 @@ InstaRecipe is a social media platform, but for recipes! You can share your own 
 
 - [X] Login
 - [X] Register
-- [] User can create a class (they are the instructor).
-- [] User can create posts (ask questions)
-- [] User can answer to posts (with distinguishment between instructor and student answer) -->
+- [ ] User can create a class (they are the instructor).
+- [ ] User can create posts (ask questions)
+- [ ] User can answer to posts (with distinguishment between instructor and student answer) -->
 
 **Required Must-have Stories**
 
 - [X] Login
 - [X] Register
-- [] User can create and update a recipe 
-- [] User can scroll through existing recipes, like and fork them
-- [] Users can view their profiles (will include list of recipes forked)
+- [ ] User can create and update a recipe 
+- [ ] User can scroll through existing recipes, like and fork them
+- [ ] Users can view their profiles (will include list of recipes forked)
 
 <!-- **Optional Nice-to-have Stories**
 * User can create a group (of students).
@@ -45,10 +45,10 @@ InstaRecipe is a social media platform, but for recipes! You can share your own 
 * Users can type in markdown
 * If instructors upvote a student's answer, it highlights it (endorses it) -->
 **Optional Nice-to-have Stories**
-* Users can comment on recipes
-* Users can send and receive follow requests
-* Users will be recommended recipes via a recommendation engine: an explore section
-* Users can chat with the people they are following
+- [ ] Users can comment on recipes
+- [ ] Users can send and receive follow requests
+- [ ] Users will be recommended recipes via a recommendation engine: an explore section
+- [ ] Users can chat with the people they are following
 
 
 ### 2. Screen Archetypes
