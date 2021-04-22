@@ -6,6 +6,9 @@
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
 
+## Progress Demo
+<img src='http://g.recordit.co/c7f24PiXdc.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 ## Overview
 ### Description
 InstaRecipe is a social media platform, but for recipes! You can share your own recipes, like and comment on other recipes, and even make changes to the recipes you like and re-share them!
