@@ -24,11 +24,11 @@ InstaRecipe is a social media platform, but for recipes! You can share your own 
 
 <!-- **Required Must-have Stories**
 
-* Login
-* Register
-* User can create a class (they are the instructor).
-* User can create posts (ask questions)
-* User can answer to posts (with distinguishment between instructor and student answer) -->
+- [X] Login
+- [X] Register
+- [] User can create a class (they are the instructor).
+- [] User can create posts (ask questions)
+- [] User can answer to posts (with distinguishment between instructor and student answer) -->
 
 **Required Must-have Stories**
 
