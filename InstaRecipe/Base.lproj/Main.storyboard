@@ -16,7 +16,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="InstaRecipe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="InstaRecipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,7 +351,11 @@
                     <navigationItem key="navigationItem" id="MMl-hK-XK7">
                         <leftBarButtonItems>
                             <barButtonItem title="Item" image="plus" catalog="system" id="NBO-PX-jTT"/>
-                            <barButtonItem title="Logout" id="SkN-bO-Uhg"/>
+                            <barButtonItem title="Logout" id="SkN-bO-Uhg">
+                                <connections>
+                                    <action selector="onLogout:" destination="QOJ-8t-Ksu" id="jBn-KB-IUD"/>
+                                </connections>
+                            </barButtonItem>
                         </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="2ic-Bj-0c8"/>
                     </navigationItem>
@@ -388,7 +392,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Egy-ix-2XL"/>
+        <segue reference="KEC-HU-ul4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
