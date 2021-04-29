@@ -7,7 +7,7 @@
 4. [Schema](#Schema)
 
 ## Progress Demo
-<img src='http://g.recordit.co/c7f24PiXdc.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/h94bDR48oC.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Overview
 ### Description
