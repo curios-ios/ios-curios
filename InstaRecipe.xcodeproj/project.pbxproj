@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		537076DB2632065900C33762 /* CreateRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537076DA2632065900C33762 /* CreateRecipeViewController.swift */; };
 		5D659147CC68C3033679FAAB /* Pods_InstaRecipeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF528C38712C444F20BA4FD0 /* Pods_InstaRecipeTests.framework */; };
 		5E5B3C91262FAAE800E7F6CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B3C90262FAAE800E7F6CD /* LoginViewController.swift */; };
 		5E5B3C96262FAB2900E7F6CD /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B3C95262FAB2900E7F6CD /* FeedViewController.swift */; };
 		5E5B3C9B262FC77200E7F6CD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B3C9A262FC77200E7F6CD /* SignUpViewController.swift */; };
-		5E5B3CE62630A5F400E7F6CD /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E5B3CD42630A5F300E7F6CD /* Montserrat-Bold.ttf */; };
-		5E5B3CE82630A5F400E7F6CD /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E5B3CD62630A5F300E7F6CD /* Montserrat-Black.ttf */; };
 		5ED828A42628CC09009F296C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED828A32628CC09009F296C /* AppDelegate.swift */; };
 		5ED828A62628CC09009F296C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED828A52628CC09009F296C /* SceneDelegate.swift */; };
 		5ED828AB2628CC09009F296C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ED828A92628CC09009F296C /* Main.storyboard */; };
@@ -45,11 +44,10 @@
 		09FB5C22BFACE0AA76396207 /* Pods-InstaRecipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipe.release.xcconfig"; path = "Target Support Files/Pods-InstaRecipe/Pods-InstaRecipe.release.xcconfig"; sourceTree = "<group>"; };
 		367E6EA22EB2CB11461B6D83 /* Pods-InstaRecipeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipeTests.release.xcconfig"; path = "Target Support Files/Pods-InstaRecipeTests/Pods-InstaRecipeTests.release.xcconfig"; sourceTree = "<group>"; };
 		48D63A5144D613585E9F3B6F /* Pods-InstaRecipe-InstaRecipeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipe-InstaRecipeUITests.debug.xcconfig"; path = "Target Support Files/Pods-InstaRecipe-InstaRecipeUITests/Pods-InstaRecipe-InstaRecipeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		537076DA2632065900C33762 /* CreateRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecipeViewController.swift; sourceTree = "<group>"; };
 		5E5B3C90262FAAE800E7F6CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5E5B3C95262FAB2900E7F6CD /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		5E5B3C9A262FC77200E7F6CD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		5E5B3CD42630A5F300E7F6CD /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "../../../../Downloads/Montserrat/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
-		5E5B3CD62630A5F300E7F6CD /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Black.ttf"; path = "../../../../Downloads/Montserrat/Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		5ED828A02628CC09009F296C /* InstaRecipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaRecipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED828A32628CC09009F296C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ED828A52628CC09009F296C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,15 +110,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		5E5B3CB12630A59000E7F6CD /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				5E5B3CD62630A5F300E7F6CD /* Montserrat-Black.ttf */,
-				5E5B3CD42630A5F300E7F6CD /* Montserrat-Bold.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		5ED828972628CC09009F296C = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +135,6 @@
 		5ED828A22628CC09009F296C /* InstaRecipe */ = {
 			isa = PBXGroup;
 			children = (
-				5E5B3CB12630A59000E7F6CD /* Fonts */,
 				5ED828A32628CC09009F296C /* AppDelegate.swift */,
 				5ED828A52628CC09009F296C /* SceneDelegate.swift */,
 				5E5B3C90262FAAE800E7F6CD /* LoginViewController.swift */,
@@ -156,6 +144,7 @@
 				5ED828AC2628CC09009F296C /* Assets.xcassets */,
 				5ED828AE2628CC09009F296C /* LaunchScreen.storyboard */,
 				5ED828B12628CC09009F296C /* Info.plist */,
+				537076DA2632065900C33762 /* CreateRecipeViewController.swift */,
 			);
 			path = InstaRecipe;
 			sourceTree = "<group>";
@@ -298,8 +287,6 @@
 			files = (
 				5ED828B02628CC09009F296C /* LaunchScreen.storyboard in Resources */,
 				5ED828AD2628CC09009F296C /* Assets.xcassets in Resources */,
-				5E5B3CE62630A5F400E7F6CD /* Montserrat-Bold.ttf in Resources */,
-				5E5B3CE82630A5F400E7F6CD /* Montserrat-Black.ttf in Resources */,
 				5ED828AB2628CC09009F296C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +417,7 @@
 			files = (
 				5E5B3C91262FAAE800E7F6CD /* LoginViewController.swift in Sources */,
 				5ED828A42628CC09009F296C /* AppDelegate.swift in Sources */,
+				537076DB2632065900C33762 /* CreateRecipeViewController.swift in Sources */,
 				5E5B3C96262FAB2900E7F6CD /* FeedViewController.swift in Sources */,
 				5ED828A62628CC09009F296C /* SceneDelegate.swift in Sources */,
 				5E5B3C9B262FC77200E7F6CD /* SignUpViewController.swift in Sources */,
@@ -538,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -593,7 +581,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
