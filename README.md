@@ -37,8 +37,10 @@ InstaRecipe is a social media platform, but for recipes! You can share your own 
 
 - [X] Login
 - [X] Register
-- [ ] User can create and update a recipe 
-- [ ] User can scroll through existing recipes, like and fork them
+- [x] User can create a recipe 
+- [ ] User can update a recipe
+- [x] User can scroll through existing recipes
+- [ ] User can like and fork recipes
 - [ ] Users can view their profiles (will include list of recipes forked)
 
 <!-- **Optional Nice-to-have Stories**
