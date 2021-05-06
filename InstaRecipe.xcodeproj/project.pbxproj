@@ -20,6 +20,7 @@
 		5ED828BB2628CC0A009F296C /* InstaRecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED828BA2628CC0A009F296C /* InstaRecipeTests.swift */; };
 		5ED828C62628CC0A009F296C /* InstaRecipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED828C52628CC0A009F296C /* InstaRecipeUITests.swift */; };
 		83A2B105A2CBD6AC46DE29DA /* Pods_InstaRecipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3094AEB10B77EFB2C189931 /* Pods_InstaRecipe.framework */; };
+		CFC390522639F1C600D758F4 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC390512639F1C600D758F4 /* RecipeCell.swift */; };
 		F9ADCC3F7A2265272370C51C /* Pods_InstaRecipe_InstaRecipeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AF51D2B7DA194821B87461 /* Pods_InstaRecipe_InstaRecipeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		99AF51D2B7DA194821B87461 /* Pods_InstaRecipe_InstaRecipeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaRecipe_InstaRecipeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF528C38712C444F20BA4FD0 /* Pods_InstaRecipeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaRecipeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17DE801DF83D6A5655B9E5B /* Pods-InstaRecipeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipeTests.debug.xcconfig"; path = "Target Support Files/Pods-InstaRecipeTests/Pods-InstaRecipeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CFC390512639F1C600D758F4 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		D3F558DBC266093DDEDCE922 /* Pods-InstaRecipe-InstaRecipeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipe-InstaRecipeUITests.release.xcconfig"; path = "Target Support Files/Pods-InstaRecipe-InstaRecipeUITests/Pods-InstaRecipe-InstaRecipeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E3094AEB10B77EFB2C189931 /* Pods_InstaRecipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaRecipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 				5ED828AE2628CC09009F296C /* LaunchScreen.storyboard */,
 				5ED828B12628CC09009F296C /* Info.plist */,
 				537076DA2632065900C33762 /* CreateRecipeViewController.swift */,
+				CFC390512639F1C600D758F4 /* RecipeCell.swift */,
 			);
 			path = InstaRecipe;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				5ED828A42628CC09009F296C /* AppDelegate.swift in Sources */,
 				537076DB2632065900C33762 /* CreateRecipeViewController.swift in Sources */,
 				5E5B3C96262FAB2900E7F6CD /* FeedViewController.swift in Sources */,
+				CFC390522639F1C600D758F4 /* RecipeCell.swift in Sources */,
 				5ED828A62628CC09009F296C /* SceneDelegate.swift in Sources */,
 				5E5B3C9B262FC77200E7F6CD /* SignUpViewController.swift in Sources */,
 			);
