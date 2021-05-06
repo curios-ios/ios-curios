@@ -26,7 +26,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let query = PFQuery(className: "Recipes")
+        let query = PFQuery(className: "Recipe")
         query.includeKey("author")
         query.limit = 20
         
