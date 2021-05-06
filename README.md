@@ -54,6 +54,7 @@ InstaRecipe is a social media platform, but for recipes! You can share your own 
 - [ ] Users can send and receive follow requests
 - [ ] Users will be recommended recipes via a recommendation engine: an explore section
 - [ ] Users can chat with the people they are following
+- [x] User stays logged in across restarts
 
 
 ### 2. Screen Archetypes
