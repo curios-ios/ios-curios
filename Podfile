@@ -8,6 +8,7 @@ target 'InstaRecipe' do
   # Pods for InstaRecipe
   pod 'Parse'
 pod 'AlamofireImage'
+pod 'MessageInputBar'
 
   target 'InstaRecipeTests' do
     inherit! :search_paths

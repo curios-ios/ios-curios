@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		537076DB2632065900C33762 /* CreateRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537076DA2632065900C33762 /* CreateRecipeViewController.swift */; };
 		5D659147CC68C3033679FAAB /* Pods_InstaRecipeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF528C38712C444F20BA4FD0 /* Pods_InstaRecipeTests.framework */; };
+		5E4BDB262654502D0067AE96 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4BDB252654502D0067AE96 /* CommentCell.swift */; };
 		5E5B3C91262FAAE800E7F6CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B3C90262FAAE800E7F6CD /* LoginViewController.swift */; };
 		5E5B3C96262FAB2900E7F6CD /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B3C95262FAB2900E7F6CD /* FeedViewController.swift */; };
 		5E5B3C9B262FC77200E7F6CD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B3C9A262FC77200E7F6CD /* SignUpViewController.swift */; };
@@ -46,6 +47,7 @@
 		367E6EA22EB2CB11461B6D83 /* Pods-InstaRecipeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipeTests.release.xcconfig"; path = "Target Support Files/Pods-InstaRecipeTests/Pods-InstaRecipeTests.release.xcconfig"; sourceTree = "<group>"; };
 		48D63A5144D613585E9F3B6F /* Pods-InstaRecipe-InstaRecipeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipe-InstaRecipeUITests.debug.xcconfig"; path = "Target Support Files/Pods-InstaRecipe-InstaRecipeUITests/Pods-InstaRecipe-InstaRecipeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		537076DA2632065900C33762 /* CreateRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecipeViewController.swift; sourceTree = "<group>"; };
+		5E4BDB252654502D0067AE96 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		5E5B3C90262FAAE800E7F6CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5E5B3C95262FAB2900E7F6CD /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		5E5B3C9A262FC77200E7F6CD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				5ED828B12628CC09009F296C /* Info.plist */,
 				537076DA2632065900C33762 /* CreateRecipeViewController.swift */,
 				CFC390512639F1C600D758F4 /* RecipeCell.swift */,
+				5E4BDB252654502D0067AE96 /* CommentCell.swift */,
 			);
 			path = InstaRecipe;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				CFC390522639F1C600D758F4 /* RecipeCell.swift in Sources */,
 				5ED828A62628CC09009F296C /* SceneDelegate.swift in Sources */,
 				5E5B3C9B262FC77200E7F6CD /* SignUpViewController.swift in Sources */,
+				5E4BDB262654502D0067AE96 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
