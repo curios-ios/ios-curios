@@ -51,7 +51,7 @@ InstaRecipe is a social media platform, but for recipes! You can share your own 
 * Users can type in markdown
 * If instructors upvote a student's answer, it highlights it (endorses it) -->
 **Optional Nice-to-have Stories**
-- [ ] Users can comment on recipes
+- [x] Users can comment on recipes
 - [ ] Users can send and receive follow requests
 - [ ] Users will be recommended recipes via a recommendation engine: an explore section
 - [ ] Users can chat with the people they are following
