@@ -11,6 +11,9 @@ import AlamofireImage
 
 class CreateRecipeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var selectedRecipe: PFObject!
+    var isForked: Bool = false
+    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descriptionView: UITextView!
@@ -18,6 +21,7 @@ class CreateRecipeViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var recipeTextView: UITextView!
 
     @IBOutlet weak var createRecipeButton: UIButton!
+    
     override func viewDidLoad() {
         descriptionView.layer.cornerRadius = 10.0
         ingredientsView.layer.cornerRadius = 10.0
@@ -26,9 +30,28 @@ class CreateRecipeViewController: UIViewController, UIImagePickerControllerDeleg
         createRecipeButton.layer.cornerRadius = 15.0
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if(selectedRecipe != nil){
+            populateFields()
+        }
     }
+       
     
+    func populateFields(){
+        isForked = true
+        nameField.text = selectedRecipe["name"] as? String
+        imageView.image = selectedRecipe["image"] as? UIImage
+        ingredientsView.text = selectedRecipe["ingredients"] as? String
+        descriptionView.text = selectedRecipe["description"] as? String
+
+        if let image = selectedRecipe["image"] as? PFFileObject {
+            image.getDataInBackground({ (imageData, error) in
+               if(error == nil){
+                   self.imageView.image = UIImage(data: imageData!)
+               }
+           })
+        }
+    }
+
     @IBAction func onSubmitButton(_ sender: Any) {
         let recipe = PFObject(className: "Recipe")
         
@@ -36,7 +59,7 @@ class CreateRecipeViewController: UIViewController, UIImagePickerControllerDeleg
         recipe["author"] = PFUser.current()!
         recipe["ingredients"] = ingredientsView.text!
         recipe["description"] = descriptionView.text!
-        
+        recipe["isForked"] = isForked
         
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(data: imageData!)

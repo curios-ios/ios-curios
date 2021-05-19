@@ -160,11 +160,30 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             selectedPost = recipe
 
         }
-        
-    
     }
     
+    @IBAction func onFork(_ sender: UIButton) {
+        var superview = sender.superview
+        while let view = superview, !(view is UITableViewCell) {
+            superview = view.superview
+        }
+        guard let cell = superview as? UITableViewCell else {
+            print("button is not contained in a table view cell")
+            return
+        }
+        guard let indexPath = tableView.indexPath(for: cell) else {
+            print("failed to get index path for cell containing button")
+            return
+        }
+        let recipe = recipes[indexPath.row]
 
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let createRecipeViewController = main.instantiateViewController(withIdentifier: "CreateRecipeViewController") as! CreateRecipeViewController
+
+        createRecipeViewController.selectedRecipe = recipe
+        self.present(createRecipeViewController, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
