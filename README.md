@@ -40,7 +40,7 @@ InstaRecipe is a social media platform, but for recipes! You can share your own 
 - [X] Register
 - [x] User can create a recipe 
 - [x] User can scroll through existing recipes
-- [x] User fork recipes
+- [x] User can fork recipes
 
 <!-- **Optional Nice-to-have Stories**
 * User can create a group (of students).
@@ -50,12 +50,12 @@ InstaRecipe is a social media platform, but for recipes! You can share your own 
 * If instructors upvote a student's answer, it highlights it (endorses it) -->
 **Optional Nice-to-have Stories**
 - [x] Users can comment on recipes
+- [x] User stays logged in across restarts
 - [ ] User can update a recipe
 - [ ] Users can view their profiles (will include list of recipes forked)
 - [ ] Users can send and receive follow requests
 - [ ] Users will be recommended recipes via a recommendation engine: an explore section
 - [ ] Users can chat with the people they are following
-- [x] User stays logged in across restarts
 
 
 ### 2. Screen Archetypes
