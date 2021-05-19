@@ -15,6 +15,7 @@ class RecipeCell: UITableViewCell {
     @IBOutlet weak var recipeImageView: UIImageView!
     
     override func awakeFromNib() {
+        recipeImageView.layer.cornerRadius = 15.0
         super.awakeFromNib()
         // Initialization code
     }

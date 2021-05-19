@@ -17,7 +17,13 @@ class CreateRecipeViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var ingredientsView: UITextView!
     @IBOutlet weak var recipeTextView: UITextView!
 
+    @IBOutlet weak var createRecipeButton: UIButton!
     override func viewDidLoad() {
+        descriptionView.layer.cornerRadius = 10.0
+        ingredientsView.layer.cornerRadius = 10.0
+        recipeTextView.layer.cornerRadius = 10.0
+            
+        createRecipeButton.layer.cornerRadius = 15.0
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

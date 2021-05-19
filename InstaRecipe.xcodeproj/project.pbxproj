@@ -47,6 +47,10 @@
 		367E6EA22EB2CB11461B6D83 /* Pods-InstaRecipeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipeTests.release.xcconfig"; path = "Target Support Files/Pods-InstaRecipeTests/Pods-InstaRecipeTests.release.xcconfig"; sourceTree = "<group>"; };
 		48D63A5144D613585E9F3B6F /* Pods-InstaRecipe-InstaRecipeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipe-InstaRecipeUITests.debug.xcconfig"; path = "Target Support Files/Pods-InstaRecipe-InstaRecipeUITests/Pods-InstaRecipe-InstaRecipeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		537076DA2632065900C33762 /* CreateRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecipeViewController.swift; sourceTree = "<group>"; };
+		5E08A194265496ED00FC0695 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "../../../../Downloads/Montserrat/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		5E08A195265496F400FC0695 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-SemiBold.ttf"; path = "../../../../Downloads/Montserrat/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		5E08A196265496FA00FC0695 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../Downloads/Montserrat/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		5E08A1972654970200FC0695 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Light.ttf"; path = "../../../../Downloads/Montserrat/Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		5E4BDB252654502D0067AE96 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		5E5B3C90262FAAE800E7F6CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5E5B3C95262FAB2900E7F6CD /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5E08A193265496D700FC0695 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5E08A194265496ED00FC0695 /* Montserrat-Bold.ttf */,
+				5E08A195265496F400FC0695 /* Montserrat-SemiBold.ttf */,
+				5E08A196265496FA00FC0695 /* Montserrat-Medium.ttf */,
+				5E08A1972654970200FC0695 /* Montserrat-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		5ED828972628CC09009F296C = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +154,7 @@
 		5ED828A22628CC09009F296C /* InstaRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				5E08A193265496D700FC0695 /* Fonts */,
 				5ED828A32628CC09009F296C /* AppDelegate.swift */,
 				5ED828A52628CC09009F296C /* SceneDelegate.swift */,
 				5E5B3C90262FAAE800E7F6CD /* LoginViewController.swift */,
