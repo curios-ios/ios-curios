@@ -323,17 +323,17 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xeg-m7-HeC">
-                                                    <rect key="frame" x="30" y="406.5" width="30" height="26.5"/>
+                                                    <rect key="frame" x="30" y="406.5" width="45" height="26.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="yuX-d5-bC7"/>
+                                                        <constraint firstAttribute="width" constant="45" id="yuX-d5-bC7"/>
                                                     </constraints>
                                                     <state key="normal" title="Like"/>
                                                     <connections>
-                                                        <action selector="likeRecipe:" destination="QOJ-8t-Ksu" eventType="touchUpInside" id="vse-hE-Z6h"/>
+                                                        <action selector="likeRecipe:" destination="vqS-fC-oZR" eventType="touchUpInside" id="stg-nT-nTG"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7f-9d-T7X">
-                                                    <rect key="frame" x="70" y="406.5" width="314" height="26.5"/>
+                                                    <rect key="frame" x="85" y="406.5" width="299" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -363,6 +363,8 @@
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="Ccp-dp-Idu" id="0LX-6L-hy3"/>
+                                            <outlet property="likeButton" destination="Xeg-m7-HeC" id="CPa-tM-Cdj"/>
+                                            <outlet property="likeLabel" destination="t7f-9d-T7X" id="AHG-mb-OSq"/>
                                             <outlet property="nameLabel" destination="hFR-KZ-ruC" id="HAq-sn-r9p"/>
                                             <outlet property="profileImageView" destination="A7X-RU-vid" id="wsU-H7-z5u"/>
                                             <outlet property="recipeImageView" destination="35K-HV-QFD" id="aIl-sg-yaK"/>

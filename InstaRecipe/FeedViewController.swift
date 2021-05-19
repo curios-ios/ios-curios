@@ -14,6 +14,7 @@ import Lottie
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+
     let commentBar = MessageInputBar()
     var showsCommentBar = false
     var selectedPost: PFObject!
@@ -30,10 +31,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.keyboardDismissMode = .interactive
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-    }
-    
-    @IBAction func likeRecipe(_ sender: Any) {
         
     }
     
