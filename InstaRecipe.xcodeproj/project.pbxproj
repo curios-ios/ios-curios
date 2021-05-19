@@ -22,6 +22,7 @@
 		5ED828C62628CC0A009F296C /* InstaRecipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED828C52628CC0A009F296C /* InstaRecipeUITests.swift */; };
 		83A2B105A2CBD6AC46DE29DA /* Pods_InstaRecipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3094AEB10B77EFB2C189931 /* Pods_InstaRecipe.framework */; };
 		CFC390522639F1C600D758F4 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC390512639F1C600D758F4 /* RecipeCell.swift */; };
+		CFCF2B9126557E0D003AF490 /* like.json in Resources */ = {isa = PBXBuildFile; fileRef = CFCF2B9026557E0D003AF490 /* like.json */; };
 		F9ADCC3F7A2265272370C51C /* Pods_InstaRecipe_InstaRecipeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AF51D2B7DA194821B87461 /* Pods_InstaRecipe_InstaRecipeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		BF528C38712C444F20BA4FD0 /* Pods_InstaRecipeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaRecipeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17DE801DF83D6A5655B9E5B /* Pods-InstaRecipeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipeTests.debug.xcconfig"; path = "Target Support Files/Pods-InstaRecipeTests/Pods-InstaRecipeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFC390512639F1C600D758F4 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		CFCF2B9026557E0D003AF490 /* like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = like.json; path = ../../../Downloads/like.json; sourceTree = "<group>"; };
 		D3F558DBC266093DDEDCE922 /* Pods-InstaRecipe-InstaRecipeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaRecipe-InstaRecipeUITests.release.xcconfig"; path = "Target Support Files/Pods-InstaRecipe-InstaRecipeUITests/Pods-InstaRecipe-InstaRecipeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E3094AEB10B77EFB2C189931 /* Pods_InstaRecipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaRecipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -161,7 +163,7 @@
 				5E5B3C95262FAB2900E7F6CD /* FeedViewController.swift */,
 				5ED828A92628CC09009F296C /* Main.storyboard */,
 				5E5B3C9A262FC77200E7F6CD /* SignUpViewController.swift */,
-				5ED828AC2628CC09009F296C /* Assets.xcassets */,
+				CFCF2B8F26557DE6003AF490 /* Assets */,
 				5ED828AE2628CC09009F296C /* LaunchScreen.storyboard */,
 				5ED828B12628CC09009F296C /* Info.plist */,
 				537076DA2632065900C33762 /* CreateRecipeViewController.swift */,
@@ -197,6 +199,15 @@
 				BF528C38712C444F20BA4FD0 /* Pods_InstaRecipeTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFCF2B8F26557DE6003AF490 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5ED828AC2628CC09009F296C /* Assets.xcassets */,
+				CFCF2B9026557E0D003AF490 /* like.json */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,7 @@
 			files = (
 				5ED828B02628CC09009F296C /* LaunchScreen.storyboard in Resources */,
 				5ED828AD2628CC09009F296C /* Assets.xcassets in Resources */,
+				CFCF2B9126557E0D003AF490 /* like.json in Resources */,
 				5ED828AB2628CC09009F296C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

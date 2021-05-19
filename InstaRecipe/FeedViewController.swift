@@ -9,6 +9,7 @@ import UIKit
 import Parse
 import AlamofireImage
 import MessageInputBar
+import Lottie
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
     
@@ -29,7 +30,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.keyboardDismissMode = .interactive
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    @IBAction func likeRecipe(_ sender: Any) {
+        
     }
     
     @objc func keyboardWillBeHidden(note: Notification) {

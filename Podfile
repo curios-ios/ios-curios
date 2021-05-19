@@ -9,6 +9,7 @@ target 'InstaRecipe' do
   pod 'Parse'
 pod 'AlamofireImage'
 pod 'MessageInputBar'
+pod 'lottie-ios'
 
   target 'InstaRecipeTests' do
     inherit! :search_paths
