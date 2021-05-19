@@ -14,6 +14,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var recipes = [PFObject]()
+    var selectedPost: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +76,43 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let post = recipes[indexPath.section]
+//        let comments = (post["comments"] as? [PFObject]) ?? []
+//
+//
+//        if indexPath.row == comments.count + 1 {
+//            showsCommentBar = true
+//            becomeFirstResponder()
+//            commentBar.inputTextView.becomeFirstResponder()
+//
+//            selectedPost = post
+//        }
+//
+//    }
+    
+    @IBAction func onFork(_ sender: UIButton) {
+        var superview = sender.superview
+        while let view = superview, !(view is UITableViewCell) {
+            superview = view.superview
+        }
+        guard let cell = superview as? UITableViewCell else {
+            print("button is not contained in a table view cell")
+            return
+        }
+        guard let indexPath = tableView.indexPath(for: cell) else {
+            print("failed to get index path for cell containing button")
+            return
+        }
+        let recipe = recipes[indexPath.row]
+        
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let createRecipeViewController = main.instantiateViewController(withIdentifier: "CreateRecipeViewController") as! CreateRecipeViewController
+    
+        createRecipeViewController.selectedRecipe = recipe
+        self.present(createRecipeViewController, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
