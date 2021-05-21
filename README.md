@@ -7,6 +7,7 @@
 4. [Schema](#Schema)
 
 ## Progress Demo
+![Fork Recipe GIF](instarecipe-fork.gif)
 ![Create Recipe GIF](create-recipe.gif)
 <img src='http://g.recordit.co/h94bDR48oC.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
