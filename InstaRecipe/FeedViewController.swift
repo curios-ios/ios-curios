@@ -292,7 +292,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("failed to get index path for cell containing button")
             return
         }
-        let recipe = recipes[indexPath.row]
+        let recipe = recipes[indexPath.section]
 
         let main = UIStoryboard(name: "Main", bundle: nil)
         let createRecipeViewController = main.instantiateViewController(withIdentifier: "CreateRecipeViewController") as! CreateRecipeViewController
