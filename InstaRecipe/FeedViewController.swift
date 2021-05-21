@@ -82,8 +82,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             if recipes != nil {
                 self.recipes = recipes!
                 self.tableView.reloadData()
-//                print(self.recipes)
-//                delete every recipe
 //                PFObject.deleteAll(inBackground: self.recipes) { (success, error) in
 //                    if(success) {
 //                        print("objects deleted")
@@ -142,11 +140,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.recipeImageView.af.setImage(withURL: url)
             
             let likesCount = recipe["likesCount"]!
-//            print("likesCount: \((likesCount) as! String)")
             cell.likeLabel.text = "\(likesCount)"
-//            print(cell.likeButton)
-//            print(cell.likeLabel)
-//            print(recipe["likesCount"]!)
+            
+            let currentUser = PFUser.current()
+            let userExistsInLikedUsers = checkLikedUsers(recipe: recipe, currentUser: currentUser)
+            
+            if userExistsInLikedUsers == -1 { // user already liked the recipe
+                cell.likeButton.setTitle("Unlike", for: .normal)
+            }
+            else if userExistsInLikedUsers == 0 { // user hasn't liked the recipe
+                cell.likeButton.setTitle("Like", for: .normal)
+            }
             
             return cell
             
@@ -178,6 +182,22 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             selectedPost = recipe
 
         }
+    }
+    
+    func checkLikedUsers(recipe: PFObject!, currentUser: PFUser!) -> Int {
+        var likedUsers = [PFObject]()
+        likedUsers = recipe["likedUsers"] as! [PFUser]
+        
+        for user in likedUsers {
+            let thisUser = user as! PFUser
+            let userEmail = "\(String(describing: thisUser.email))"
+            let currentUserEmail = "\(String(describing: currentUser.email))"
+            if userEmail == currentUserEmail {
+                return -1 // user already liked the recipe
+            }
+        }
+        
+        return 0 // user hasn't liked the recipe yet
     }
     
     func updateLikeCount(id: String, val: Int) {
@@ -227,15 +247,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("failed to get index path for cell containing button")
             return
         }
-        let recipe = recipes[indexPath.row] // recipe that was liked
-
+        let recipe = recipes[indexPath.section] // recipe that was liked
+        
+        
         let recipeCell = cell as? RecipeCell
-//        print("index path: \(indexPath.row)")
-//        print("CELL: \(String(describing: recipeCell!.likeButton))")
-//        print("LIKELABEL: \(String(describing: recipeCell!.likeLabel.text))")
-//        print("LIKEBUTTON: \(String(describing: recipeCell!.likeButton))")
-//        print("Recipe: \(recipe)")
-//        print("recipe id: \(recipe.objectId)")
         let likeText = recipeCell!.likeButton.titleLabel!.text
         var likeCount = Int(recipeCell!.likeLabel.text!)
         if likeText == "Like" {
@@ -244,8 +259,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             // increment like count in parse db
             updateLikeCount(id: recipe.objectId!, val: likeCount!)
-            
-            // add current user to liked users
+//
+//            // add current user to liked users
             currentUser = PFUser.current()
             updateLikedUser(id: recipe.objectId!, user: currentUser, add: 1, index: indexPath.row)
             
@@ -255,8 +270,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             recipeCell!.likeButton.setTitle("Like", for: .normal)
             // decrement like count in parse db
             updateLikeCount(id: recipe.objectId!, val: likeCount!)
-            
-            // remove current user from liked users
+
+            //remove current user from liked users
             currentUser = PFUser.current()
             updateLikedUser(id: recipe.objectId!, user: currentUser, add: 0, index: indexPath.row)
         }
