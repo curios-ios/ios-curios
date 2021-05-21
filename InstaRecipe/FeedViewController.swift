@@ -193,6 +193,27 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func updateLikedUser(id: String, user: PFUser!, add: Int, index: Int) {
+        let query = PFQuery(className: "Recipe")
+        query.getObjectInBackground(withId: id) { (newRecipe: PFObject?, error: Error?)  in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else if let newRecipe = newRecipe {
+                var users = [PFObject]()
+                users = newRecipe["likedUsers"] as! [PFObject]
+                if add == 1 {
+                    users.append(user)
+                }
+                else if add == 0 {
+                    users.remove(at: index)
+                }
+                newRecipe["likedUsers"] = users;
+                newRecipe.saveInBackground()
+            }
+        }
+    }
+    
     @IBAction func onLike(_ sender: UIButton) {
         var superview = sender.superview
         while let view = superview, !(view is UITableViewCell) {
@@ -223,14 +244,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             // increment like count in parse db
             updateLikeCount(id: recipe.objectId!, val: likeCount!)
+            
+            // add current user to liked users
             currentUser = PFUser.current()
+            updateLikedUser(id: recipe.objectId!, user: currentUser, add: 1, index: indexPath.row)
+            
         }
         else if likeText == "Unlike" {
             likeCount = likeCount! - 1
             recipeCell!.likeButton.setTitle("Like", for: .normal)
             // decrement like count in parse db
             updateLikeCount(id: recipe.objectId!, val: likeCount!)
+            
+            // remove current user from liked users
             currentUser = PFUser.current()
+            updateLikedUser(id: recipe.objectId!, user: currentUser, add: 0, index: indexPath.row)
         }
         recipeCell!.likeLabel.text = String(likeCount!)
         
