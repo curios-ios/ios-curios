@@ -60,6 +60,8 @@ class CreateRecipeViewController: UIViewController, UIImagePickerControllerDeleg
         recipe["ingredients"] = ingredientsView.text!
         recipe["description"] = descriptionView.text!
         recipe["isForked"] = isForked
+        recipe["likesCount"] = 0
+        recipe["likedUsers"] = [PFUser]()
         
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(data: imageData!)

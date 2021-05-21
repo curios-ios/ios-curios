@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class RecipeCell: UITableViewCell {
 
@@ -21,22 +22,6 @@ class RecipeCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-
-    @IBAction func likeRecipe(_ sender: Any) {
-        let likeText = likeButton.titleLabel!.text
-        var likeCount = Int(likeLabel.text!)
-        if likeText == "Like" {
-            likeCount = likeCount! + 1
-            likeButton.setTitle("Unlike", for: .normal)
-        }
-        else if likeText == "Unlike" {
-            likeCount = likeCount! - 1
-            likeButton.setTitle("Like", for: .normal)
-        }
-        likeLabel.text = String(likeCount!)
-    }
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

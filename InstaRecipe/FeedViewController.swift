@@ -9,7 +9,6 @@ import UIKit
 import Parse
 import AlamofireImage
 import MessageInputBar
-import Lottie
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
     
@@ -18,6 +17,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     let commentBar = MessageInputBar()
     var showsCommentBar = false
     var selectedPost: PFObject!
+    var currentUser: PFUser!
     
     var recipes = [PFObject]()
     
@@ -75,15 +75,27 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidAppear(animated)
         
         let query = PFQuery(className: "Recipe")
-        query.includeKeys(["author","comments", "comments.author"])
+        query.includeKeys(["author", "comments", "comments.author", "likesCount", "likedUsers"])
         query.limit = 20
         
         query.findObjectsInBackground{(recipes, error) in
             if recipes != nil {
                 self.recipes = recipes!
                 self.tableView.reloadData()
+//                print(self.recipes)
+//                delete every recipe
+//                PFObject.deleteAll(inBackground: self.recipes) { (success, error) in
+//                    if(success) {
+//                        print("objects deleted")
+//                    }
+//                    else {
+//                        print("error: \(String(describing: error))")
+//                    }
+//                }
+
             }
         }
+    
     }
     
     @IBAction func onLogout(_ sender: Any) {
@@ -129,6 +141,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             cell.recipeImageView.af.setImage(withURL: url)
             
+            let likesCount = recipe["likesCount"]!
+//            print("likesCount: \((likesCount) as! String)")
+            cell.likeLabel.text = "\(likesCount)"
+//            print(cell.likeButton)
+//            print(cell.likeLabel)
+//            print(recipe["likesCount"]!)
             
             return cell
             
@@ -160,6 +178,62 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             selectedPost = recipe
 
         }
+    }
+    
+    func updateLikeCount(id: String, val: Int) {
+        let query = PFQuery(className: "Recipe")
+        query.getObjectInBackground(withId: id) { (newRecipe: PFObject?, error: Error?)  in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else if let newRecipe = newRecipe {
+                newRecipe["likesCount"] = val
+                newRecipe.saveInBackground()
+            }
+        }
+    }
+    
+    @IBAction func onLike(_ sender: UIButton) {
+        var superview = sender.superview
+        while let view = superview, !(view is UITableViewCell) {
+            superview = view.superview
+        }
+        guard let cell = superview as? UITableViewCell else {
+            print("button is not contained in a table view cell")
+            return
+        }
+        guard let indexPath = tableView.indexPath(for: cell) else {
+            print("failed to get index path for cell containing button")
+            return
+        }
+        let recipe = recipes[indexPath.row] // recipe that was liked
+
+        let recipeCell = cell as? RecipeCell
+//        print("index path: \(indexPath.row)")
+//        print("CELL: \(String(describing: recipeCell!.likeButton))")
+//        print("LIKELABEL: \(String(describing: recipeCell!.likeLabel.text))")
+//        print("LIKEBUTTON: \(String(describing: recipeCell!.likeButton))")
+//        print("Recipe: \(recipe)")
+//        print("recipe id: \(recipe.objectId)")
+        let likeText = recipeCell!.likeButton.titleLabel!.text
+        var likeCount = Int(recipeCell!.likeLabel.text!)
+        if likeText == "Like" {
+            likeCount = likeCount! + 1
+            recipeCell!.likeButton.setTitle("Unlike", for: .normal)
+            
+            // increment like count in parse db
+            updateLikeCount(id: recipe.objectId!, val: likeCount!)
+            currentUser = PFUser.current()
+        }
+        else if likeText == "Unlike" {
+            likeCount = likeCount! - 1
+            recipeCell!.likeButton.setTitle("Like", for: .normal)
+            // decrement like count in parse db
+            updateLikeCount(id: recipe.objectId!, val: likeCount!)
+            currentUser = PFUser.current()
+        }
+        recipeCell!.likeLabel.text = String(likeCount!)
+        
     }
     
     @IBAction func onFork(_ sender: UIButton) {
